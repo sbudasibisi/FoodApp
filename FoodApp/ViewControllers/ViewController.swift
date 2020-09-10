@@ -7,7 +7,7 @@ import MapKit
 import CoreLocation
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, ServicesProtocol, UISearchBarDelegate, MKMapViewDelegate, LocationProtocol {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ServicesProtocol, UISearchBarDelegate, LocationProtocol {
     
     var currentLocation: CLLocation?
    
@@ -74,8 +74,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func errorUpdatingLocation(title: String, description: String) {
-        
-    }
+        let alert = UIAlertController(title: title, message: description, preferredStyle:.alert)
+               alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (action) in
+        }))
+        self.present(alert, animated: true , completion: nil)    }
     
     func updateRestaurents(restaurents: [Restaurent]) {
         self.restaurents = restaurents
@@ -104,7 +106,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let iCloudAction = UIAlertAction(title: "Save to iCloud", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
-            
+            //Unable to complete due to time constraints
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
