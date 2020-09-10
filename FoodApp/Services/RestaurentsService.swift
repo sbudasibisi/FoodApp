@@ -4,7 +4,7 @@
 
 import UIKit
 
-let API_KEY = "API KEY"
+let API_KEY = "API_KEY"
 
 class RestaurentsService: NSObject {
 
