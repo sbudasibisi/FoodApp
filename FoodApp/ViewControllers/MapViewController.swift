@@ -1,8 +1,4 @@
-//
-//  MapViewController.swift
-//  FoodApp
-//
-//  Created by Sibusiso on 2020/09/09.
+
 //  Copyright © 2020 Sibusiso. All rights reserved.
 //
 
@@ -26,13 +22,6 @@ class MapViewController: UIViewController , MKMapViewDelegate, MapUpdatesProtioc
         mapViewModel = MapViewModel()
         mapViewModel.mapUpdatesDelegate = self
         updateCurrentLocation()
-    }
-    
-    
-    func configureCurrentLocation(){
-        mapView.addAnnotation(destinationLocation!)
-        centerCurrentLocation(location: self.currentLocation!, radius: 2500)
-        mapView.showsUserLocation = true
     }
     
     
@@ -71,7 +60,7 @@ class MapViewController: UIViewController , MKMapViewDelegate, MapUpdatesProtioc
     
     
     func updateCurrentLocation() {
-        centerCurrentLocation(location: mapViewModel.currentLocation!, radius: 5000)
+        centerCurrentLocation(location: mapViewModel.currentLocation!, radius: 1000)
         mapView.setRegion(mapViewModel.region, animated: true)
         mapView.addAnnotation(destinationLocation!)
         mapView.showsUserLocation = true
