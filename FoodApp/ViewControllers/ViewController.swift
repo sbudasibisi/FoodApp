@@ -9,6 +9,8 @@ import CoreLocation
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ServicesProtocol, UISearchBarDelegate, LocationProtocol {
     
+    
+    
     var currentLocation: CLLocation?
    
     
@@ -46,6 +48,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RestaurentTableViewCell.cellIdentifier, for: indexPath) as! RestaurentTableViewCell
         let restaurent = restaurents[indexPath.row]
+        if(restaurent.imageURL != nil){
+            restaurent.imageLoaderDelegate = self
+            cell.configureCellData(name: restaurent.title!, distance: restaurent.subtitle!, image: restaurent.image)
+            return cell
+        }
         cell.configureCellData(name: restaurent.title!, distance: restaurent.subtitle!, image: UIImage())
         return cell
     }
@@ -91,6 +98,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (action) in
         }))
         self.present(alert, animated: true , completion: nil)
+    }
+    
+    func updateTable() {
+        DispatchQueue.main.async {
+            self.restaurentsTableView.reloadData()
+        }
     }
     
     

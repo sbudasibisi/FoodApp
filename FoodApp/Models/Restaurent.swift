@@ -10,18 +10,21 @@ class Restaurent: NSObject , MKAnnotation{
     var title:  String?
     var subtitle: String?
     var coordinate: CLLocationCoordinate2D
-    var image: UIImageView?
-    
+    var imageURL: String?
+    var image: UIImage?
+    var imageLoaderDelegate: ServicesProtocol?
     
     init(restaurentName: String, distance: String, destinationLoction: CLLocation, imageUrl: String?) {
         self.title = restaurentName
         self.subtitle = distance
-//        if(imageUrl != nil){
-//            self.image = UIImageView()
-//            self.image?.setImage(url: imageUrl!)
-//        }
+        self.imageURL = imageUrl
         self.coordinate = CLLocationCoordinate2D(latitude: destinationLoction.coordinate.latitude, longitude: destinationLoction.coordinate.longitude)
         super.init()
+        if(imageUrl != nil){
+            DispatchQueue.global().async {
+                self.setNewImage(url: imageUrl!)
+            }
+        }
     }
    
     
@@ -37,5 +40,15 @@ class Restaurent: NSObject , MKAnnotation{
         return mapItem
     }
     
+    
+    func setNewImage(url: String){
+        if let url = NSURL(string: url) {
+            if let data = NSData(contentsOf: url as URL) {
+                    self.image = UIImage(data: data as Data)
+                    self.imageLoaderDelegate?.updateTable()
+                
+            }
+        }
+    }
     
 }
