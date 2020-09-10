@@ -1,8 +1,4 @@
-//
-//  RestaurentsViewModel.swift
-//  FoodApp
-//
-//  Created by Sibusiso on 2020/09/09.
+
 //  Copyright © 2020 Sibusiso. All rights reserved.
 //
 
