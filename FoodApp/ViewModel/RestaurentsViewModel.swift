@@ -31,7 +31,7 @@ class RestaurentsViewModel: NSObject, LocationProtocol {
     }
     
     
-    func handleSearchResults(restaurents: [Results]?){
+    func handleSearchResults(restaurents: [Results]?, error: Error?){
         if restaurents != nil{
             var restaurentItems = [Restaurent]()
             for result in restaurents!{
@@ -48,6 +48,12 @@ class RestaurentsViewModel: NSObject, LocationProtocol {
                 }
             }
             self.serviceDelegate?.updateRestaurents(restaurents: restaurentItems)
+        }else{
+            if error != nil{
+                serviceDelegate?.error_response(title: "Error encountered" , message: error!.localizedDescription)
+            }else{
+                serviceDelegate?.error_response(title: "Error encountered" , message: "Unknown error encountered.")
+            }
         }
     }
     
