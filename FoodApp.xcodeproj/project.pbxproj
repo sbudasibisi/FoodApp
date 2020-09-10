@@ -168,6 +168,9 @@
 		D86BDEB0250537B600A86D10 /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				D888967C250A3562001B8B5B /* Extensions */,
+				D888967B250A3519001B8B5B /* ViewControllers */,
+				D888967A250A3510001B8B5B /* New Group */,
 				D83CE121250A2C4500D94E41 /* Protocols */,
 				D8BFEE2B250925BA00ED25CA /* ViewModel */,
 				D8BFEE2A2509259A00ED25CA /* Services */,
@@ -176,17 +179,10 @@
 				D8DB0CA62506C56F0098FB7D /* Models */,
 				D86BDEB1250537B600A86D10 /* AppDelegate.swift */,
 				D86BDEB3250537B600A86D10 /* SceneDelegate.swift */,
-				D86BDEB5250537B600A86D10 /* ViewController.swift */,
 				D86BDEB7250537B600A86D10 /* Main.storyboard */,
 				D86BDEBA250537C600A86D10 /* Assets.xcassets */,
 				D86BDEBC250537C600A86D10 /* LaunchScreen.storyboard */,
 				D86BDEBF250537C600A86D10 /* Info.plist */,
-				D81C9ECD2507D3ED00577DF1 /* UImageView.swift */,
-				D8BFEE262508C7AB00ED25CA /* MapViewController.swift */,
-				D8BFEE282508CD8400ED25CA /* Restaurent.swift */,
-				D8EE75F02509DE1400D6016D /* UIViewController.swift */,
-				D8EE75F22509F57F00D6016D /* String.swift */,
-				D8EE75F42509F8D100D6016D /* LocationManager.swift */,
 			);
 			path = FoodApp;
 			sourceTree = "<group>";
@@ -209,9 +205,36 @@
 			path = FoodAppUITests;
 			sourceTree = "<group>";
 		};
+		D888967A250A3510001B8B5B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		D888967B250A3519001B8B5B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D86BDEB5250537B600A86D10 /* ViewController.swift */,
+				D8BFEE262508C7AB00ED25CA /* MapViewController.swift */,
+				D8EE75F02509DE1400D6016D /* UIViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D888967C250A3562001B8B5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D81C9ECD2507D3ED00577DF1 /* UImageView.swift */,
+				D8EE75F22509F57F00D6016D /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D8BFEE2A2509259A00ED25CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D8EE75F42509F8D100D6016D /* LocationManager.swift */,
 				D8BFEE2E2509277600ED25CA /* RestaurentsService.swift */,
 			);
 			path = Services;
@@ -229,6 +252,7 @@
 		D8DB0CA62506C56F0098FB7D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D8BFEE282508CD8400ED25CA /* Restaurent.swift */,
 				D81C9EBD2507B98D00577DF1 /* Geometry.swift */,
 				D81C9EB72507B98C00577DF1 /* Json4Swift_Base.swift */,
 				D81C9EB82507B98C00577DF1 /* Location.swift */,
