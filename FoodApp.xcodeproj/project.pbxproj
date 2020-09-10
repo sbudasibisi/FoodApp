@@ -19,7 +19,6 @@
 		D81C9EC72507B98D00577DF1 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9EBD2507B98D00577DF1 /* Geometry.swift */; };
 		D81C9ECB2507BD9E00577DF1 /* RestaurentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9EC92507BD9E00577DF1 /* RestaurentTableViewCell.swift */; };
 		D81C9ECC2507BD9E00577DF1 /* RestaurentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81C9ECA2507BD9E00577DF1 /* RestaurentTableViewCell.xib */; };
-		D81C9ECE2507D3ED00577DF1 /* UImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9ECD2507D3ED00577DF1 /* UImageView.swift */; };
 		D83CE11E250A123C00D94E41 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CE11D250A123C00D94E41 /* MapViewModel.swift */; };
 		D83CE120250A198500D94E41 /* MapUpdatesProtiocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CE11F250A198500D94E41 /* MapUpdatesProtiocol.swift */; };
 		D86BDEB2250537B600A86D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BDEB1250537B600A86D10 /* AppDelegate.swift */; };
@@ -72,7 +71,6 @@
 		D81C9EBD2507B98D00577DF1 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		D81C9EC92507BD9E00577DF1 /* RestaurentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurentTableViewCell.swift; sourceTree = "<group>"; };
 		D81C9ECA2507BD9E00577DF1 /* RestaurentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurentTableViewCell.xib; sourceTree = "<group>"; };
-		D81C9ECD2507D3ED00577DF1 /* UImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageView.swift; sourceTree = "<group>"; };
 		D83CE11D250A123C00D94E41 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D83CE11F250A198500D94E41 /* MapUpdatesProtiocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUpdatesProtiocol.swift; sourceTree = "<group>"; };
 		D86BDEAE250537B600A86D10 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,7 +215,6 @@
 		D888967C250A3562001B8B5B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D81C9ECD2507D3ED00577DF1 /* UImageView.swift */,
 				D8EE75F22509F57F00D6016D /* String.swift */,
 			);
 			path = Extensions;
@@ -412,7 +409,6 @@
 				D8EE75F52509F8D100D6016D /* LocationManager.swift in Sources */,
 				D86BDEB6250537B600A86D10 /* ViewController.swift in Sources */,
 				D86BDEB2250537B600A86D10 /* AppDelegate.swift in Sources */,
-				D81C9ECE2507D3ED00577DF1 /* UImageView.swift in Sources */,
 				D81C9EC52507B98D00577DF1 /* Results.swift in Sources */,
 				D81C9EC12507B98D00577DF1 /* Json4Swift_Base.swift in Sources */,
 				D8EE75F32509F57F00D6016D /* String.swift in Sources */,
