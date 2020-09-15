@@ -32,5 +32,25 @@ class MapViewModel: NSObject, LocationProtocol {
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         return region
     }
+    
+    
+    
+    func retrieveDirections(mapView: MKMapView, destinationLocation: Restaurent){
+    let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: self.currentLocation!.coordinate, addressDictionary: nil))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation.coordinate, addressDictionary: nil))
+        request.requestsAlternateRoutes = true
+        request.transportType = .automobile
 
+        let directions = MKDirections(request: request)
+
+        directions.calculate {response, error in
+            guard let unwrappedResponse = response else { return }
+
+            for route in unwrappedResponse.routes {
+                mapView.addOverlay(route.polyline)
+                mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+            }
+        }
+    }
 }

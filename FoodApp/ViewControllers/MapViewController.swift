@@ -22,6 +22,7 @@ class MapViewController: UIViewController , MKMapViewDelegate, MapUpdatesProtioc
         mapViewModel = MapViewModel()
         mapViewModel.mapUpdatesDelegate = self
         updateCurrentLocation()
+        mapViewModel.retrieveDirections(mapView: mapView, destinationLocation: destinationLocation!)
     }
     
     
@@ -56,6 +57,13 @@ class MapViewController: UIViewController , MKMapViewDelegate, MapUpdatesProtioc
     func centerCurrentLocation(location :CLLocation, radius: CLLocationDistance){
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: radius, longitudinalMeters: radius)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        renderer.strokeColor = UIColor.blue
+        return renderer
     }
     
     

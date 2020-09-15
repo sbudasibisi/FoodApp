@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Restaurent Locator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Mdj-64-LvC"/>
+                    <navigationItem key="navigationItem" title="Restaurent Locator" id="Mdj-64-LvC"/>
                     <connections>
                         <outlet property="restaurantSearchBar" destination="iGH-YF-K4X" id="S2n-Ci-O1B"/>
                         <outlet property="restaurentsTableView" destination="WZh-mJ-fKV" id="0XB-BE-Ez5"/>

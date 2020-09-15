@@ -10,10 +10,7 @@ import CoreLocation
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ServicesProtocol, UISearchBarDelegate, LocationProtocol {
     
     
-    
     var currentLocation: CLLocation?
-   
-    
     var restaurents = [Restaurent]()
     var restaurentsViewModel = RestaurentsViewModel()
     
